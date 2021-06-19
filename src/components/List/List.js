@@ -4,7 +4,6 @@ import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, 
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
 import useStyles from './styles.js';
 
-
 const List = ({ places, type, setType, rating, setRating, childClicked, isLoading }) => {
   const [elRefs, setElRefs] = useState([]);
   const classes = useStyles();
@@ -12,7 +11,6 @@ const List = ({ places, type, setType, rating, setRating, childClicked, isLoadin
   useEffect(() => {
     setElRefs((refs) => Array(places.length).fill().map((_, i) => refs[i] || createRef()));
   }, [places]);
-
 
   return (
     <div className={classes.container}>
